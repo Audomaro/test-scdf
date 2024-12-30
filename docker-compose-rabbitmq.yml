@@ -1,23 +1,19 @@
-version: "3"
+version: '3'
 
 # Reconfigures the default docker-compose.yml to replace Kafka/Zookeeper by RabbitMQ
 # Usage: docker-compose -f ./docker-compose.yml -f ./docker-compose-rabbitmq.yml up
 services:
+
   rabbitmq:
     image: rabbitmq:3.8-management
     container_name: dataflow-rabbitmq
     environment:
       LANG: en_US.utf8
       LC_ALL: en_US.utf8
-      JDK_JAVA_OPTIONS: "-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8"
-      RABBITMQ_DEFAULT_PASS: guest
-      RABBITMQ_DEFAULT_USER: guest
-    ports:
-      - "15672:15672"
-      - "5672:5672"
+      JDK_JAVA_OPTIONS: '-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8'
     expose:
-      - "5672"
-      - "15672"
+      - '5672'
+      - '15672'
 
   dataflow-server:
     environment:
