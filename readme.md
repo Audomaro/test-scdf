@@ -4,14 +4,7 @@ Proyecto para testear la herramienta.
 
 ## Servers
 
-Los servidores de la herramiente estan en la carpeta `servers` para arrancarlos es necesario abrir una terminal y ejecutar el archivo `start-servers.sh` y dejarlo corriendo.
-
-para bajar los servidores usar:
-
-```bash
-curl https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-server/2.11.5/spring-cloud-dataflow-server-2.11.5.jar
-curl https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-skipper-server/2.11.5/spring-cloud-skipper-server-2.11.5.jar
-```
+Los servidores de la herramiente estan en la carpeta `servers`, para descargarlos usar el bash `download-servers.sh` y para arrancarlos ejecutar el archivo `start-servers.sh` y dejarlo corriendo.
 
 La interfaz de esta es [http://localhost:9393/dashboard](http://localhost:9393/dashboard)
 
