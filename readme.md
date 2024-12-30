@@ -6,6 +6,10 @@ Proyecto para testear la herramienta.
 
 Los servidores de la herramiente estan en la carpeta `servers`, para descargarlos usar el bash `download-servers.sh` y para arrancarlos ejecutar el archivo `start-servers.sh` y dejarlo corriendo.
 
+Tambien se podria ejecutar desde los ymls con el archivo `from-docker-compose.sh`
+
+> Instalar las extensiones de podman `Docker extension` y `Podman extension`
+
 La interfaz de esta es [http://localhost:9393/dashboard](http://localhost:9393/dashboard)
 
 > notas: aquí hay mas info sobre los servers: [https://dataflow.spring.io/docs/installation/local/manual/](https://dataflow.spring.io/docs/installation/local/manual/)
