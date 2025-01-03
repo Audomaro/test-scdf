@@ -1,10 +1,10 @@
-package com.example.file_watcher;
+package com.example.sender;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FileWatcherApplicationTests {
+class SenderApplicationTests {
 
 	@Test
 	void contextLoads() {

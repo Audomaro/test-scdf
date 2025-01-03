@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sender
+  cloud:
+    stream:
+      bindings:
+        sendUsageDetail-out-0:
+          destination: personalizado-salida
+          content-type: application/json
+
+      kafka:
+        binder:
+          brokers: localhost:9092
+          defaultBrokerPort: 9092
+
+          producers:
+            default:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+                value.serializer: org.springframework.kafka.core.serializer.JsonSerializer
+
+          # Configuración de deserialización para Kafka (si también consumes mensajes JSON)
+          consumers:
+            default:
+              configuration:
+                key.deserializer: org.springframework.kafka.core.serializer.JsonDeserializer
+                value.deserializer: org.springframework.kafka.core.serializer.JsonDeserializer

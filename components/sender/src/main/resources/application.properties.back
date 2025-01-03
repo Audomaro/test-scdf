@@ -1,0 +1,18 @@
+spring.application.name=sender
+
+# Configuración de RabbitMQ
+# Configuración de Spring Cloud Stream
+# spring.cloud.stream.bindings.usageDetails-out-0.destination=usage-details-topic
+# spring.cloud.stream.bindings.usageDetails-out-0.content-type=application/json
+
+# Configuración del Kafka Binder
+spring.cloud.stream.kafka.binder.brokers=localhost:9092
+spring.cloud.stream.kafka.binder.defaultBrokerPort=9092
+
+# Configuración de serialización para Kafka
+spring.cloud.stream.kafka.binder.producers.default.configuration.key.serializer=org.apache.kafka.common.serialization.StringSerializer
+spring.cloud.stream.kafka.binder.producers.default.configuration.value.serializer=org.springframework.kafka.core.serializer.JsonSerializer
+
+# Configuración de deserialización para Kafka (si también consumes mensajes JSON)
+spring.cloud.stream.kafka.binder.consumers.default.configuration.key.deserializer=org.springframework.kafka.core.serializer.JsonDeserializer
+spring.cloud.stream.kafka.binder.consumers.default.configuration.value.deserializer=org.springframework.kafka.core.serializer.JsonDeserializer

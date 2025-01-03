@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: sender
+  cloud:
+    stream:
+      defaultBinder: kafka
+      default:
+        content-type: application/json
+        producers:
+          destination: json-file
+
+      kafka:
+        binder:
+          brokers: localhost:9092
+          defaultBrokerPort: 9092
