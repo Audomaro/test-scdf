@@ -5,9 +5,9 @@ spring:
     stream:
       defaultBinder: kafka
       default:
-        content-type: application/json
-        producers:
-          destination: json-file
+        destination: json-file
+        producer:
+          content-type: application/json
 
       kafka:
         binder:

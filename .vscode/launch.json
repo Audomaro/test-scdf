@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MyProcesorApplication",
+      "request": "launch",
+      "mainClass": "com.example.my_procesor.MyProcesorApplication",
+      "projectName": "my-procesor"
+    },
+    {
+      "type": "java",
       "name": "SenderApplication",
       "request": "launch",
       "mainClass": "com.example.sender.SenderApplication",

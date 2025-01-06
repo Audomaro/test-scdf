@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: my-procesor
+
+  cloud:
+    stream:
+      defaultBinder: kafka
+      function:
+        definition: process
+      bindings:
+        process-in-0:
+          destination: json-file
+          contentType: application/json
+          group: my-procesor
+          consumer:
+            configuration:
+              key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+              value.deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+            useNativeDecoding: true
+        process-out-0:
+          destination: xml-file
+          contentType: application/xml
+          producer:
+            configuration:
+              key.serializer: org.apache.kafka.common.serialization.StringSerializer
+              value.serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    kafka:
+      binder:
+        brokers: localhost:9092
+        defaultBrokerPort: 9092

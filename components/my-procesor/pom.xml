@@ -11,9 +11,9 @@
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>sender</artifactId>
+  <artifactId>my-procesor</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>sender</name>
+  <name>my-processor</name>
   <description>Demo project for Spring Boot</description>
   <url />
   <licenses>
@@ -35,6 +35,11 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
+      <version>2.18.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
       <version>2.18.2</version>
     </dependency>
     <dependency>
